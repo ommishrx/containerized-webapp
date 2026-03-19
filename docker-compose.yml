@@ -1,0 +1,39 @@
+services:
+
+  database:
+    build: ./database
+    container_name: postgres_db
+    restart: always
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      mynet:
+        ipv4_address: 192.168.64.11
+    environment:
+      POSTGRES_DB: mydb
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+
+  backend:
+    build: ./backend
+    container_name: backend_api
+    restart: always
+    depends_on:
+      - database
+    environment:
+      DB_HOST: 192.168.64.11
+      DB_USER: myuser
+      DB_PASSWORD: mypassword
+      DB_NAME: mydb
+    networks:
+      mynet:
+        ipv4_address: 192.168.64.10
+    ports:
+      - "3000:3000"
+
+volumes:
+  postgres_data:
+
+networks:
+  mynet:
+    external: true
