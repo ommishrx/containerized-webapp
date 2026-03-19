@@ -1,48 +1,146 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Docker Assignment</title>
+  <title>Docker Containerization Assignment</title>
   <style>
-    body { font-family: Arial; margin: 40px; background: #f5f5f5; }
-    h1 { color: teal; }
-    .box { background: white; padding: 20px; margin: 20px 0; border-radius: 10px; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f8;
+    }
+
+    header {
+      background: linear-gradient(90deg, #0f766e, #14b8a6);
+      color: white;
+      padding: 30px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      color: #0f766e;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      line-height: 1.8;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 16px;
+      margin: 10px 5px 0 0;
+      background: #0f766e;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #115e59;
+    }
+
+    pre {
+      background: #f1f5f9;
+      padding: 12px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+    }
   </style>
 </head>
+
 <body>
 
-<h1> Docker Containerization Assignment</h1>
+<header>
+  🚀 Docker Containerization Assignment
+</header>
 
-<div class="box">
-  <b>Name:</b> Om Mishra <br>
-  <b>SAP ID:</b> 500119609 <br>
-  <b>Batch:</b> 4 CCVT
-</div>
+<div class="container">
 
-<div class="box">
-  <h2>Project Components</h2>
-  <ul>
-    <li>Backend: Node.js</li>
-    <li>Database: PostgreSQL</li>
-    <li>Docker + Docker Compose</li>
-    <li>Macvlan Networking</li>
-  </ul>
-</div>
+  <div class="card">
+    <b>Name:</b> Om Mishra <br>
+    <b>SAP ID:</b> 500119609 <br>
+    <b>Batch:</b> 4 CCVT <br>
+    <b>College:</b> UPES Dehradun
+  </div>
 
-<div class="box">
-  <h2>Commands Used</h2>
-  <pre>
+  <div class="card">
+    <h2>📌 Project Components</h2>
+    <ul>
+      <li>Backend: Node.js + Express</li>
+      <li>Database: PostgreSQL</li>
+      <li>Containerization: Docker</li>
+      <li>Orchestration: Docker Compose</li>
+      <li>Networking: Macvlan</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>🔗 GitHub Repository</h2>
+    <a class="btn" href="https://github.com/ommishrx/containerized-webapp" target="_blank">View Repository</a>
+  </div>
+
+  <div class="card">
+    <h2> Commands Used</h2>
+    <pre>
 docker compose up -d --build
 docker ps
 docker network inspect mynet
-  </pre>
+    </pre>
+  </div>
+
+  <div class="card">
+    <h2> Input</h2>
+    <pre>
+POST /users
+{
+  "name": "Omi"
+}
+    </pre>
+  </div>
+
+  <div class="card">
+    <h2> Output</h2>
+    <pre>
+{"status":"OK"}
+{"id":1,"name":"Omi"}
+    </pre>
+  </div>
+
+  <div class="card">
+    <h2>  Screenshots</h2>
+    <img src="screenshots/api.png" width="100%" style="border-radius:10px;"><br><br>
+    <img src="screenshots/network.png" width="100%" style="border-radius:10px;">
+  </div>
+
 </div>
 
-<div class="box">
-  <h2>Output</h2>
-  <pre>
-{"status":"OK"}
-  </pre>
-</div>
+<footer>
+  Made with  by Om Mishra
+</footer>
 
 </body>
 </html>
