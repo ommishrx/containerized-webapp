@@ -1,5 +1,15 @@
-# 🚀 Containerized Web Application with PostgreSQL  
+# 🚀 Containerized Web Application with SQL  
 ### Docker + Macvlan Networking
+
+
+---
+
+## 👤 Student Details
+
+- **Name:** Om Mishra  
+- **SAP ID:** 500119609  
+- **Batch:** 4 CCVT  
+- **College:** UPES Dehradun  
 
 ---
 
